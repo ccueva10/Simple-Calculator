@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	// TODO complete addition function returns a double
 	// TODO complete subtraction function returns a double
 	// TODO complete multiplication function returns a double
 	// TODO complete division function...throw error when dividing by zero...returns
@@ -12,10 +11,14 @@ public class Calculator {
 
 		System.out.println("Welcome to the Calculator Program");
 
-		// initialized three variables
-		double num1, num2, result;
-		int operation = 0;
 		Scanner scanner = new Scanner(System.in);
+
+		// initialized three variables
+	       double num1 = getValidNumber("Enter the first number: ", scanner);
+	       double num2 = getValidNumber("Enter the second number: ", scanner);
+	       double result;
+		
+		int operation = 0;
 
 		do {
 			operation = menu(scanner);
@@ -23,7 +26,8 @@ public class Calculator {
 			switch (operation) {
 
 			case 1: {
-				// result = add(num1,num2);
+			
+				  result = add(num1,num2);
 
 				break;
 			}
@@ -65,5 +69,28 @@ public class Calculator {
 
 		return scanner.nextInt();
 	}
+	
+	  private static double getValidNumber(String prompt, Scanner scanner) {
+	        double number;
+	        while (true) {
+	            System.out.print(prompt);
+
+	            if (scanner.hasNextDouble()) {
+	                number = scanner.nextDouble();
+	                break;
+	            } 
+	            else {
+	                System.out.println("Invalid input. Please enter a valid number");
+	                scanner.next();
+	            }
+	        }
+	        return number;
+	    }
+	
+    private static double add(double num1, double num2) {
+        double result = num1 + num2;
+        System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
+        return result;
+}
 
 }
