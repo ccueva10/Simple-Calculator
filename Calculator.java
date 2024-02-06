@@ -1,5 +1,3 @@
-package com.example.calculator;
-
 import java.util.Scanner;
 
 public class Calculator {
@@ -12,7 +10,7 @@ public class Calculator {
 
 	public static void main(String[] args) {
 
-		System.out.println("Welcome to the Calculator Program");
+		System.out.println("Welcome to the Calculator Program\n");
 
 		// initialized three variables
 		Scanner scanner = new Scanner(System.in);
@@ -45,7 +43,7 @@ public class Calculator {
 				break;
 			}
 			case 4: {
-				if (num1 == 0 || num2 == 0) {
+				if (num2 == 0) {
 					System.out.println("Cannot divide by 0");
 					break;
 				}
@@ -59,6 +57,7 @@ public class Calculator {
 					System.out.println("Invalid choice. Please enter a number between 1 and 4.");
 				}
 				continue;
+			}
 				//Allow the user to choose whether to perform another calculation or exit the programm
 				System.out.print("Do you want to perform another calculation? (yes/no): ");
         			String choice = scanner.next();
@@ -67,7 +66,7 @@ public class Calculator {
            	 		}
        			 } while (true);
 			 System.out.println("Goodbye!");
-    		 while (true);
+    
 		}
 		private static int menu(Scanner scanner) {
 		System.out.println("Select an option:");
