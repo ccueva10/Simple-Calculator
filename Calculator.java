@@ -59,14 +59,17 @@ public class Calculator {
 					System.out.println("Invalid choice. Please enter a number between 1 and 4.");
 				}
 				continue;
-
-			}
-		} while (operation != 0);
-		System.out.println("Goodbye!");
-
-	}
-
-	private static int menu(Scanner scanner) {
+				//Allow the user to choose whether to perform another calculation or exit the programm
+				System.out.print("Do you want to perform another calculation? (yes/no): ");
+        			String choice = scanner.next();
+            			if (!choice.equalsIgnoreCase("yes")) {
+                			break;
+           	 		}
+       			 } while (true);
+			 System.out.println("Goodbye!");
+    		 while (true);
+		}
+		private static int menu(Scanner scanner) {
 		System.out.println("Select an option:");
 		System.out.println("1: Addition");
 		System.out.println("2: Subtraction");
