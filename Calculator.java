@@ -8,8 +8,8 @@ public class Calculator {
 
 		// initialized three variables
 		Scanner scanner = new Scanner(System.in);
-	do {
-	       double num1 = getValidNumber("Enter the first number: ", scanner);
+do {
+		   double num1 = getValidNumber("Enter the first number: ", scanner);
 	       double num2 = getValidNumber("Enter the second number: ", scanner);
 	       double result;
 
@@ -45,9 +45,9 @@ public class Calculator {
 				break;
 			}
 			 case 0: {
-				    System.out.println("Goodbye!");
-				    scanner.close();
-				    return;
+                    System.out.println("Goodbye!");
+                    scanner.close();
+                    return;
 			 }
 			default:
 				if (operation != 0) {
@@ -55,7 +55,7 @@ public class Calculator {
 				}
 				continue;
 			}
-				// Allow the user to choose whether to perform another calculation or exit the program
+				//Allow the user to choose whether to perform another calculation or exit the program
 			while(true) {
 				  System.out.print("Do you want to perform another calculation? (yes/no): ");
 	                String choice = scanner.next();
@@ -77,6 +77,7 @@ public class Calculator {
 	    }
 	
 		private static int menu(Scanner scanner) {
+		while(true) {
 		System.out.println("Select an option:");
 		System.out.println("1: Addition");
 		System.out.println("2: Subtraction");
@@ -84,10 +85,26 @@ public class Calculator {
 		System.out.println("4: Division");
 		System.out.println("0: Exit Calculator");
 
-		return scanner.nextInt();
+		// Check for valid input of menu
+		 if (scanner.hasNextInt()) {
+	            int choice = scanner.nextInt();
+	            if (choice >= 0 && choice <= 4) {
+	                return choice;
+	                
+	            } 
+	            else {
+	            	// if user enters number less than 0 or greater than 4
+	                System.out.println("Invalid choice. Please enter a number between 0 and 4.");
+	            }
+	        } 
+		 	else {
+		 		// if user enters anything else
+	            System.out.println("Invalid choice. Please enter a number between 0 and 4.");
+	            scanner.next();
+	        }
+	    }
 	}
-
-	// Check if num1 and num2 are valid inputs
+	
 	  private static double getValidNumber(String prompt, Scanner scanner) {
 	        double number;
 	        while (true) {
@@ -104,8 +121,8 @@ public class Calculator {
 	        }
 	        return number;
 	    }
-
-
+	  
+		
 	    private static double add(double num1, double num2) {
 	        double result = num1 + num2;
 	        System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
