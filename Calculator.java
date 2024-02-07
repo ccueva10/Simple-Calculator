@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class Calculator {
 
 	public static void main(String[] args) {
-
+		
 		System.out.println("Welcome to the Calculator Program\n");
 
 		// initialized three variables
 		Scanner scanner = new Scanner(System.in);
-	   do {
+	do {
 	       double num1 = getValidNumber("Enter the first number: ", scanner);
 	       double num2 = getValidNumber("Enter the second number: ", scanner);
 	       double result;
@@ -45,9 +45,9 @@ public class Calculator {
 				break;
 			}
 			 case 0: {
-                    System.out.println("Goodbye!");
-                    scanner.close();
-                    return;
+				    System.out.println("Goodbye!");
+				    scanner.close();
+				    return;
 			 }
 			default:
 				if (operation != 0) {
@@ -55,16 +55,27 @@ public class Calculator {
 				}
 				continue;
 			}
-				//Allow the user to choose whether to perform another calculation or exit the programm
-				System.out.print("Do you want to perform another calculation? (yes/no): ");
-        			String choice = scanner.next();
-            			if (!choice.equalsIgnoreCase("yes")) {
-                			break;
-           	 		}
-       			 } while (true);
-			 System.out.println("Goodbye!");
-    
-		}
+				// Allow the user to choose whether to perform another calculation or exit the program
+			while(true) {
+				  System.out.print("Do you want to perform another calculation? (yes/no): ");
+	                String choice = scanner.next();
+	                
+	                if (choice.equalsIgnoreCase("yes")) {
+	                    break;
+	                    
+	                } else if (choice.equalsIgnoreCase("no")) {
+	                    System.out.println("Goodbye!");
+	                    scanner.close();
+	                    return;
+	                    
+	                } else {
+	                    System.out.println("Invalid choice. Please enter 'yes' or 'no'.");
+	                }
+	            }
+	            
+	        } while (true);
+	    }
+	
 		private static int menu(Scanner scanner) {
 		System.out.println("Select an option:");
 		System.out.println("1: Addition");
@@ -75,7 +86,8 @@ public class Calculator {
 
 		return scanner.nextInt();
 	}
-	
+
+	// Check if num1 and num2 are valid inputs
 	  private static double getValidNumber(String prompt, Scanner scanner) {
 	        double number;
 	        while (true) {
@@ -92,25 +104,27 @@ public class Calculator {
 	        }
 	        return number;
 	    }
-	
-    private static double add(double num1, double num2) {
-        double result = num1 + num2;
-        System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
-        return result;
-    }
-    private static double sub(double num1, double num2) {
-        double result = num1 - num2;
-        System.out.println("Result: " + num1 + " - " + num2 + " = " + result);
-        return result;
-    }
-    private static double multi(double num1, double num2) {
-        double result = num1 * num2;
-        System.out.println("Result: " + num1 + " * " + num2 + " = " + result);
-        return result;
-    }
-    private static double div(double num1, double num2) {
-        double result = num1 / num2;
-        System.out.println("Result: " + num1 + " / " + num2 + " = " + result);
-        return result;
-    }
-}
+
+
+	    private static double add(double num1, double num2) {
+	        double result = num1 + num2;
+	        System.out.println("Result: " + num1 + " + " + num2 + " = " + result);
+	        return result;
+	    }
+	    private static double sub(double num1, double num2) {
+	        double result = num1 - num2;
+	        System.out.println("Result: " + num1 + " - " + num2 + " = " + result);
+	        return result;
+	    }
+	    private static double multi(double num1, double num2) {
+	        double result = num1 * num2;
+	        System.out.println("Result: " + num1 + " * " + num2 + " = " + result);
+	        return result;
+	    }
+	    private static double div(double num1, double num2) {
+	        double result = num1 / num2;
+	        System.out.println("Result: " + num1 + " / " + num2 + " = " + result);
+	        return result;
+	    }
+	}
+
