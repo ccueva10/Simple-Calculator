@@ -2,27 +2,19 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	// TODO complete addition function returns a double
-	// TODO complete subtraction function returns a double
-	// TODO complete multiplication function returns a double
-	// TODO complete division function...throw error when dividing by zero...returns
-	// a double
-
 	public static void main(String[] args) {
 
 		System.out.println("Welcome to the Calculator Program\n");
 
 		// initialized three variables
 		Scanner scanner = new Scanner(System.in);
-
-		   double num1 = getValidNumber("Enter the first number: ", scanner);
+	   do {
+	       double num1 = getValidNumber("Enter the first number: ", scanner);
 	       double num2 = getValidNumber("Enter the second number: ", scanner);
 	       double result;
-		
-		int operation = 0;
 
-		do {
-			operation = menu(scanner);
+		
+			int operation = menu(scanner);
 
 			switch (operation) {
 
@@ -52,6 +44,11 @@ public class Calculator {
 
 				break;
 			}
+			 case 0: {
+                    System.out.println("Goodbye!");
+                    scanner.close();
+                    return;
+			 }
 			default:
 				if (operation != 0) {
 					System.out.println("Invalid choice. Please enter a number between 1 and 4.");
