@@ -1,6 +1,7 @@
 # Simple Calculator
 
-A console-based calculator program that allows users to perform basic arithmetic operations.
+A console-based calculator program that allows users to perform basic arithmetic operations. It allows users to enter two numbers, select an operation, perform the calculation, and display the result. It provides error handling for invalid inputs and division by zero, along with choosing whether to perform another calculation or to exit the program.
+
 
 ## Getting Started
 
