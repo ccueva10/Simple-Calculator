@@ -1,111 +1,104 @@
 # Test Document for Simple Calculator Program
 
-## Test case 1: Addition
-- **Input:**
-  - Num 1  = 10
-  - Num 2 = 5
-  - Operation # = 1
-- **Expected output:** 15
-- **Result:** 15
-- **Testing result:** Passed
-
-## Test case 2: Subtraction
-- **Input:**
-  - Num 1  = 8
-  - Num 2 = 5
-  - Operation # = 2
-- **Expected output:** 3
-- **Result:** 3
-- **Testing result:** Passed
-
-## Test case 3: Multiplication
-- **Input:**
-  - Num 1  = 6
-  - Num 2 = 4
-  - Operation # = 3
-- **Expected output:** 24
-- **Result:** 24
-- **Testing result:** Passed
-
-## Test case 4: Division
-- **Input:**
-  - Num 1  = 14
-  - Num 2 = 2
-  - Operation # = 4
-- **Expected output:** 7
-- **Result:** 7
-- **Testing result:** Passed
-
-## Test case 5: Division by Zero
-- **Input:**
-  - Num 1  = 10
-  - Num 2 = 0
-  - Operation # = 4
-- **Expected output:** Invalid
-- **Result:** Cannot divide by 0
-- **Testing result:** Passed
-
-## Test case 6: Invalid input of num 1
-- **Input:**
-  - Num 1  = abc
-  - Num 2 = 0
-  - Operation # = 3
-- **Expected output:** Invalid input
-- **Result:** Invalid input. Please enter a valid number
-- **Testing result:** Passed
-
-## Test case 7: Invalid input of operation
-- **Input:**
-  - Num 1  = 1
-  - Num 2 = 10
-  - Operation # = abc
-- **Expected output:** Invalid input
-- **Result:** Invalid choice. Please enter a number between 0 and 4.
-- **Testing result:** Passed
-
-## Test case 8: Invalid input of “yes” or “no”
-- **Input:**
-  - Do you want to perform another calculation? (yes/no) = maybe
-- **Expected output:** Invalid input
-- **Result:** Invalid choice. Please enter 'yes' or 'no'.
-- **Testing result:** Passed
-
-## Additional Test Cases
-
-### Test Case 1: Addition
+## Test Case 1: Addition
 **Description:** Perform an addition operation.  
 **Steps:**
-- Input the first number as 5.
-- Input the second number as 3.
-- Choose the addition operation.  
-**Expected Result:** The output should be 8.
+- Input the first number as 10.
+- Input the second number as 5.
+- Choose the addition operation (1).
+    
+ **Expected output:** 15  
+ **Result:** 15  
+ **Testing result:** Passed
 
-### Test Case 2: Subtraction
+## Test Case 2: Subtraction
 **Description:** Perform a subtraction operation.  
 **Steps:**
-- Input the first number as 10.
-- Input the second number as 4.
-- Choose the subtraction operation.  
-**Expected Result:** The output should be 6.
+- Input the first number as 8.
+- Input the second number as 5.
+- Choose the subtraction operation (2).
+    
+ **Expected output:** 3   
+ **Result:** 3    
+ **Testing result:** Passed
 
-### Test Case 3: Multiplication
+## Test Case 3: Multiplication
 **Description:** Perform a multiplication operation.  
 **Steps:**
-- Input the first number as 7.
-- Input the second number as 6.
-- Choose the multiplication operation.  
-**Expected Result:** The output should be 42.
+- Input the first number as 6.
+- Input the second number as 4.
+- Choose the multiplcation operation (3).
+    
+ **Expected output:** 24  
+ **Result:** 24  
+ **Testing result:** Passed
 
-### Test Case 4: Division
+## Test Case 4: Division
 **Description:** Perform a division operation.  
 **Steps:**
-- Input the first number as 20.
-- Input the second number as 5.
-- Choose the division operation.  
-**Expected Result:** The output should be 4.
+- Input the first number as 14.
+- Input the second number as 2.
+- Choose the division operation (4).
+    
+ **Expected output:** 7  
+ **Result:** 7  
+ **Testing result:** Passed
 
-### Test Case 6: Invalid Number Input
-**Description:** Enter a non-numeric value for numbers.  
+## Test Case 5: Division by Zero
+**Description:** Perform a division by zero operation.  
 **Steps:**
-- Input the first number as abc.  
-**Expected Result:** An error message prompting to enter a valid number.
+- Input the first number as 10.
+- Input the second number as 0.
+- Choose the division operation (4).
+    
+ **Expected output:** Invalid  
+ **Result:** Cannot divide by 0  
+ **Testing result:** Passed
+
+## Test Case 6: Invalid Input of a Number
+**Description:** Perform an invalid input of second number.  
+**Steps:**
+- Input the first number as 20.
+- Input the second number as 'abc'.
+    
+ **Expected output:** Invalid input  
+ **Result:** Invalid input. Please enter a valid number.    
+ **Testing result:** Passed
+
+
+## Test Case 7: Invalid Input of Operation
+**Description:** Perform an invalid input of operation.  
+**Steps:**
+- Input the first number as 1.
+- Input the second number as 10.
+- Enter 'abc' as operation.
+    
+ **Expected output:** Invalid input  
+ **Result:** Invalid choice. Please enter a number between 0 and 4.    
+ **Testing result:** Passed
+
+
+## Test Case 8: Invalid Input of "yes" or "no" Selection
+**Description:** Perform an invalid input of selecting whether to perform another operation.  
+**Steps:**
+- Input the first number as 20.
+- Input the second number as 10.
+- Choose the addition operation (1).
+- Input 'maybe' as to perform another operation.
+    
+ **Expected output:** Invalid input  
+ **Result:** Invalid choice. Please enter 'yes' or 'no'.  
+ **Testing result:** Passed
+
+## Test Case 9: Exit the Program
+**Description:** Perform an exit operation.  
+**Steps:**
+- Input the first number as 1.
+- Input the second number as 10.
+- Enter the exit operation (0).
+    
+ **Expected output:** Exit program  
+ **Result:** Goodbye!     
+ **Testing result:** Passed
+
+
