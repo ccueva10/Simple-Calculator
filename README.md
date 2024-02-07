@@ -1,14 +1,32 @@
-# Simple-Calculator
-a simple calculator program that performs basic arithmetic operations. The calculator should be a console-based application that allows users to enter two numbers, select an operation, perform the calculation, display the result, and then choose whether to perform another calculation or exit the program.
-Start the Application:
-If you are using an IDE like Eclipse, import the project and run
-Using the Calculator:
-Enter the First Number: When prompted, type the first number and press Enter.
-Enter the Second Number: Similarly, type the second number and press Enter.
-		Select an Operation: Choose from the provided arithmetic operations:
-		Addition
-		Subtraction
-		Multiplication
-		Division
-		Enter the number corresponding to the operation you wish to perform.
-View the Result: The result of the calculation will be displayed.
+# Simple Calculator
+
+A console-based calculator program that allows users to perform basic arithmetic operations.
+
+## Getting Started
+
+### Prerequisites
+Make sure you have Java installed on your system.
+
+### Installation
+If you are using an IDE like Eclipse:
+1. Clone the project or download the ZIP file.
+2. Import the project into your IDE.
+3. Run the `Calculator` class.
+
+## Usage
+
+1. **Start the Application:**
+   - If using an IDE like Eclipse, import the project and run the `Calculator` class.
+
+2. **Using the Calculator:**
+   - The program will prompt you to enter the first and second numbers.
+   - Choose from the provided arithmetic operations:
+     - 1. Addition
+     - 2. Subtraction
+     - 3. Multiplication
+     - 4. Division
+     - Enter the number corresponding to the operation you wish to perform.
+
+   - The result of the calculation will be displayed.
+
+   - After viewing the result, choose whether to perform another calculation or exit the program.
